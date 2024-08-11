@@ -1,43 +1,64 @@
 body {
-    margin: 0;
-    padding: 0px;
+  margin: 0;
+  padding: 0px;
+  font-family: Nanum Myeongjo;
+}
+
+.content-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  width: 50%;
 }
 
 .header-container {
-    background-color: #b03560;
-    align-items: center;
-    top: 0;
-    height: 60px;
-    position: fixed;
-    width: 100%;
-    padding-left: 2rem;
+  background-color: #d9bacb;
+  align-items: center;
+  top: 0;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-name {
-    color: rgb(238, 238, 238);
+  color: #594c53;
+  margin: 2rem;
+  font-size: 40px;
 }
 
-.main-link-container{
-    background-color: #437869;
-   margin-top: 60px;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 2rem;
+.main-link-container {
+  background-color: #b8d3d9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2rem;
+  gap: 2rem;
 }
 
-.title{
-    font-size: 50px;
-    padding-left: 2rem;
-    padding-bottom: 0.5rem;
+.title {
+  font-size: 30px;
+  margin-top: 1rem;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.date{
-    color: gray;
-    padding-left: 2rem;
-    padding-bottom: 1rem;
+.date {
+  color: #f2e0c9;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
 }
 .text {
-    margin-left: 2rem;
+  margin-left: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
-
