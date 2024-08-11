@@ -1,3 +1,31 @@
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+.header-container {
+    background-color: #b03560;
+    align-items: center;
+    top: 0;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    padding-left: 2rem;
+}
+
+.header-name {
+    color: rgb(238, 238, 238);
+}
+
+.main-link-container{
+    background-color: #437869;
+   margin-top: 60px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
 .title{
     font-size: 50px;
     padding-left: 2rem;
@@ -13,9 +41,3 @@
     margin-left: 2rem;
 }
 
-.main-link-container{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 2rem;
-}
