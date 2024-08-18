@@ -4,6 +4,39 @@ body {
   font-family: Nanum Myeongjo;
 }
 
+/*/////////////////// HEADER ///////////////////*/
+
+.header-container {
+  background-color: #d9bacb;
+  align-items: center;
+  top: 0;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-name {
+  color: #594c53;
+  font-size: 40px;
+  margin-left: 7%;
+  padding-left: 2rem;
+}
+
+.main-link-container {
+  background-color: #b8d3d9;
+  margin-right: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2rem;
+  gap: 2rem;
+  cursor: pointer;
+}
+/*/////////////////// CONTENT ///////////////////*/
+
 .content-container {
   width: 100%;
   display: flex;
@@ -14,41 +47,15 @@ body {
 .title-container {
   display: flex;
   flex-direction: column;
+  width: 18%;
 }
 .content {
   width: 50%;
 }
 
-.header-container {
-  background-color: #d9bacb;
-  align-items: center;
-  top: 0;
-  height: 60px;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.header-name {
-  color: #594c53;
-  margin: 2rem;
-  font-size: 40px;
-}
-
-.main-link-container {
-  background-color: #b8d3d9;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 2rem;
-  gap: 2rem;
-  cursor: pointer;
-}
-
 .title {
   font-size: 30px;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding-left: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -61,10 +68,30 @@ body {
 .text {
   margin-left: 2rem;
   margin-bottom: 2rem;
-  margin-top: 4.5rem;
+  margin-top: 2.5rem;
   text-align: justify;
   text-justify: inter-word;
 }
+
+.content-image {
+  width: 400px;
+  object-fit: fill;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.content-image-broad {
+  width: 600px;
+  object-fit: fill;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+/*/////////////////// FOOTER ///////////////////*/
 
 .footer-container {
   background-color: #f2d5e5;

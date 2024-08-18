@@ -3,36 +3,46 @@ body {
   padding: 0px;
   font-family: Nanum Myeongjo;
 }
-
-.li .welcome-container {
+.welcome-container {
   height: 120px;
   display: flex;
   top: 0;
   background-color: aqua;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.welcome-name {
+  font-size: 60px;
+  margin-left: 2rem;
+}
+
+.main-link-container {
+  background-color: #b8d3d9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2rem;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.content {
+  width: 50%;
+}
 .home-image {
   width: 100%;
   height: 200px;
   object-fit: fill;
   filter: opacity(0.5);
   filter: blur(0.2);
-  <feConvolveMatrix 
-        order="3"
-        preserveAlpha="true" 
-        kernelMatrix="
-		  -1 -1 -1
-		  -1  8 -1
-		  -1 -1 -1"
-		divisor="1.0"
-		bias="0.0"   
-		  />
 }
 
 .footer-container {
   background-color: #f2d5e5;
   text-align: center;
+  left: 0;
+  bottom: 0;
   width: 100%;
   height: 60px;
-  bottom: 0;
 }
