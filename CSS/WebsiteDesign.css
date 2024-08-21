@@ -89,13 +89,13 @@ body {
   width: auto;
   display: flex;
   justify-content: space-between;
+  gap: 1.25rem;
 }
 
 .content-image {
-  width: 100%;
+  width: 80%;
   object-fit: fill;
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .content-image-broad {
@@ -104,7 +104,6 @@ body {
   max-height: 900px;
   object-fit: fill;
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 /*/////////////////// MOBILE ///////////////////*/
@@ -113,7 +112,7 @@ body {
   .header-name {
     color: #594c53;
     font-size: 35px;
-    margin-left: 7%;
+    margin-left: 5%;
     padding-left: 1rem;
   }
 
@@ -152,17 +151,17 @@ body {
   .title {
     font-size: 25px;
     margin-top: 2rem;
-    padding-left: 2rem;
     margin-bottom: 0.5rem;
   }
 
   .content {
-    width: 90%;
+    width: 100%;
   }
 
   .text {
-    margin-left: 2rem;
+    width: 90%;
     margin-bottom: 2rem;
+    margin-left: 0;
     margin-top: 0.5rem;
     text-align: justify;
     text-justify: inter-word;
@@ -172,6 +171,12 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+  }
+
+  .content-image {
+    width: 100%;
+    object-fit: fill;
+    margin-top: 1rem;
   }
 }
 
