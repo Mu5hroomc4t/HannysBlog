@@ -61,20 +61,16 @@ body {
 }
 
 /*/ ////////////////// IMAGES ///////////////////*/
-.welcome-container {
+.welcome-slideshow-container {
   margin-top: 60px;
   width: calc(100% - 8rem);
+  position: relative;
   text-align: center;
   color: white;
+  display: flex;
 }
 
-.welcome-image {
-  width: 100%;
-  opacity: 0.8;
-  margin-left: 4rem;
-}
-
-.text-centered {
+.text-slideshow {
   margin-top: 1.5rem;
   padding: 0;
   text-align: justify;
@@ -85,9 +81,84 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.welcome-image {
+  width: 100%;
+  opacity: 0.8;
+  margin-left: 4rem;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+
+  user-select: none;
+}
+
+.next {
+  right: 3rem;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1 sec;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*/ ////////////////// DESTINATION LIST ///////////////////*/
 
-.destinations {
+.select-destination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.destinations-header {
+  margin-top: 2rem;
+  padding-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  font-size: 30px;
+}
+
+.destinations-content {
+  width: 50%;
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+
+.destinations-title {
+  color: #594c53;
+  font-size: 25px;
+  padding: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.destination-link {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /*/ ////////////////// FOOTER ///////////////////*/
