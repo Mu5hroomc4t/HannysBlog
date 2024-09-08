@@ -36,7 +36,18 @@ body {
 }
 
 .main-link {
-  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.main-link:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.main-link:hover {
+  color: #594c53;
+  text-decoration: underline;
 }
 
 /*/ ////////////////// CONTENT  ///////////////////*/
@@ -160,6 +171,18 @@ body {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+
+.destination-link:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.destination-link:hover {
+  color: #594c53;
+  text-decoration: underline;
 }
 
 /*/ ////////////////// FOOTER ///////////////////*/
