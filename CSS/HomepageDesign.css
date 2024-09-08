@@ -60,14 +60,14 @@ body {
   filter: blur(0.2);
 }
 
-/*/ ////////////////// IMAGES ///////////////////*/
+/*/ ////////////////// SILDESHOW ///////////////////*/
 .welcome-slideshow-container {
   margin-top: 60px;
   width: calc(100% - 8rem);
   position: relative;
   text-align: center;
   color: white;
-  display: flex;
+  overflow: hidden;
 }
 
 .text-slideshow {
