@@ -13,7 +13,7 @@ body {
   height: 60px;
   position: fixed;
   width: 100%;
-
+  z-index: 100;
   display: flex;
   justify-content: space-between;
 }
@@ -63,11 +63,51 @@ body {
 /*/ ////////////////// SILDESHOW ///////////////////*/
 .welcome-slideshow-container {
   margin-top: 60px;
-  width: calc(100% - 8rem);
+  width: 100%;
+  display: flex;
+}
+
+.welcome-slideshow-wrapper {
   position: relative;
-  text-align: center;
-  color: white;
-  overflow: hidden;
+  margin: 0 auto;
+  width: calc(100% - 10rem);
+}
+
+.slideshow {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  aspect-ratio: 16/7;
+}
+
+.slideshow img {
+  flex: 1 0 100%;
+  opacity: 0.8;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slideshow-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slideshow-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #b8d3d9;
+  opacity: 0.75;
+}
+
+.slideshow-nav a:hover {
+  opacity: 1;
 }
 
 .text-slideshow {
@@ -79,45 +119,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.welcome-image {
-  width: 100%;
-  opacity: 0.8;
-  margin-left: 4rem;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-
-  user-select: none;
-}
-
-.next {
-  right: 3rem;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1 sec;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /*/ ////////////////// DESTINATION LIST ///////////////////*/
