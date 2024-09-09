@@ -26,7 +26,6 @@ body {
 }
 
 .main-link-container {
-  background-color: #b8d3d9;
   margin-right: 7%;
   display: flex;
   align-items: center;
@@ -86,7 +85,7 @@ body {
 
 .slideshow {
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   aspect-ratio: 16/7;
@@ -200,10 +199,8 @@ body {
 
 @media only screen and (max-width: 768px) {
   .main-link-container {
-    background-color: #b8d3d9;
     display: flex;
     align-items: center;
-
     margin-right: 2rem;
     gap: 2rem;
   }
