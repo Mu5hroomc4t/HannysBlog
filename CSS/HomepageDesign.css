@@ -72,7 +72,7 @@ body {
 
 /*/ ////////////////// SILDESHOW ///////////////////*/
 .welcome-slideshow-container {
-  margin-top: 60px;
+  margin-top: 100px;
   width: 100%;
   display: flex;
 }
@@ -81,6 +81,8 @@ body {
   position: relative;
   margin: 0 auto;
   width: calc(100% - 10rem);
+  align-items: center;
+  height: 100%;
 }
 
 .slideshow {
@@ -114,6 +116,7 @@ body {
   border-radius: 50%;
   background-color: #b8d3d9;
   opacity: 0.75;
+  scroll-behavior: auto;
 }
 
 .slideshow-nav a:hover {
@@ -122,13 +125,16 @@ body {
 
 .text-slideshow {
   margin-top: 1.5rem;
-  padding: 0;
-  text-align: justify;
+  padding: 2rem 3rem;
+  text-align: center;
   text-justify: inter-word;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  max-width: 80%;
 }
 
 /*/ ////////////////// DESTINATION LIST ///////////////////*/
@@ -198,6 +204,13 @@ body {
 /*/////////////////// MOBILE ///////////////////*/
 
 @media only screen and (max-width: 768px) {
+  .header-name {
+    color: #594c53;
+    font-size: 35px;
+    margin-left: 5%;
+    padding-left: 1rem;
+  }
+
   .main-link-container {
     display: flex;
     align-items: center;
@@ -208,7 +221,43 @@ body {
   .main-link {
     display: none;
   }
-  .content {
+
+  .text-slideshow {
+    position: relative;
+    top: auto;
+    left: auto;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: center;
+    transform: none;
+  }
+
+  .slideshow {
+    aspect-ratio: 16/9; /* Höhe der Slideshow im mobilen Modus */
+  }
+
+  .welcome-slideshow-wrapper {
+    width: 100%;
+    display: block;
+  }
+
+  .select-destination {
+    width: 90%;
+    display: grid;
+    justify-content: left;
+  }
+
+  .destinations-header {
+    font-size: 30px;
+    color: rgb(54, 53, 53);
+  }
+
+  .destinations-content {
+    padding-left: 2rem;
+  }
+
+  .destination-link {
     width: 90%;
   }
 
