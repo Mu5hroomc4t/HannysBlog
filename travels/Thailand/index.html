@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hannys Reisetagebuch - Thailand 2024</title>
+    <link rel="icon" type="png" href="../../pictures/Homepage/favicon.png" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.cursors-4u.net/cursors/animated/paper-airplane-19477b19-32.css"
+    />
+  </head>
+
+  <body>
+    <div class="clouds">
+      <div class="cloud-big"></div>
+      <div class="cloud-small"></div>
+    </div>
+    <header class="homepage-header">
+      <button id="menu-open" class="menu-button-open">☰</button>
+      <div class="site-header">
+        <div class="container">
+          <a class="title-link" href="../../index.html">
+            <span class="homepage-icons">☁️</span>
+            <h1 class="homepage-title">Hannys Reiseblog</h1>
+            <span class="homepage-icons">☁️</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside id="sidebar">
+        <section class="about-me-sidebar">
+          Ich bin Hanny und ich reise gerne. Um meine Familie und Freunde an
+          meinen Erlebnissen teilhaben lassen zu können, habe ich diese kleine
+          Ecke im Internet erschaffen.
+        </section>
+
+        <!-- <section class="kerlchen-week">
+          Hier könnte Ihr Kerlchen stehen!
+        </section> -->
+
+        <!-- <section class="settings">Hier werden Einstellungen sein.</section> -->
+        <section class="guestbook glow-box">
+          <form class="guestbook-form" id="guestbook-form">
+            <label for="name" class="guestbook-entry-header">Name:</label>
+            <input
+              type="text"
+              id="name"
+              class="guestbook-text-area"
+              name="name"
+              placeholder="Wie ist dein Name?"
+              required
+              oninvalid="
+                this.setCustomValidity('Bitte gib deinen Namen ein! 🌴')
+              "
+              oninput="this.setCustomValidity('')"
+            />
+            <p class="name-warning">Bitte gib einen namen ein</p>
+            <label for="message" class="guestbook-entry-header"
+              >Nachricht:</label
+            >
+            <textarea
+              type="text"
+              id="message"
+              class="guestbook-text-area"
+              name="message"
+              rows="5"
+              placeholder="Hier kannst du Anmerkungen, Fragen und Ideen hinterlassen!🌴"
+              required
+              oninvalid="
+                this.setCustomValidity('Bitte gib eine Nachricht ein! 💌')
+              "
+              oninput="this.setCustomValidity('')"
+            ></textarea>
+            <button type="submit" class="guestbook-input">Abschicken</button>
+            <p id="guestbook-status"></p>
+            <!-- für erfolgsmeldung-->
+          </form>
+        </section>
+        <section class="guestbook-all-entries glow-box">
+          <section class="guestbook-entries-header-box">
+            <img
+              class="mini-icon"
+              src="../../pictures/Homepage/gifs/writing-kitten.gif"
+              alt="tippende Katze"
+            />
+            <h3 class="guestbook-header">Gästebuch</h3>
+          </section>
+          <section id="guestbook-entries"></section>
+        </section>
+      </aside>
+
+      <main>
+        <article class="blog-entry">
+          <h1 class="journey-title title-box">Thailand 2024</h1>
+
+          <nav class="journey-navigation title-box">
+            <section class="navigation-box-header">
+              <img
+                class="mini-icon"
+                src="../../pictures/Homepage/gifs/globe.gif"
+                alt="sich drehender Globus"
+              />
+              <h2>Wohin soll die Reise gehen?</h2>
+            </section>
+            <div class="navigation-box">
+              <button onclick="loadContent('./bangkok1.html')">
+                <a href="#bangkok1">1. Das erste Mal Bangkok</a>
+              </button>
+              <button onclick="loadContent('./chiang-mai1.html')">
+                <a href="#chiang-mai1">2. Die nächste Stadt: Chiang Mai</a>
+              </button>
+              <button onclick="loadContent('./pai.html')">
+                <a href="#pai">3. Auf in den Norden, nach Pai</a>
+              </button>
+              <button onclick="loadContent('./chiang-mai2.html')">
+                <a href="#chiang-mai2">4. Zurück nach Chiang Mai</a>
+              </button>
+              <button onclick="loadContent('./ao-nang.html')">
+                <a href="#ao-nang">5. Die Westküste in Ao Nang</a>
+              </button>
+              <button onclick="loadContent('./koh-lanta.html')">
+                <a href="#koh-lanta"> 6. Entspannung auf Koh Lanta</a>
+              </button>
+              <button onclick="loadContent('./koh-phangan.html')">
+                <a href="#koh-phangan"> 7. Insel-Leben auf Koh Phangan</a>
+              </button>
+              <button onclick="loadContent('./bangkok2.html')">
+                <a href="#bangkok2"> 8. Abschied von Thailand in Bangkok</a>
+              </button>
+            </div>
+          </nav>
+
+          <div id="contentDisplay"></div>
+        </article>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-column">
+        <h3>Rechtliches</h3>
+        <a href="../../datenschutz.html">Datenschutzerklärung</a>
+        <a href="../../impressum.html">Impressum</a>
+      </div>
+      <div class="footer-column">
+        <p>© 2026 Johanna Hepke. ☁️ Reiseblog seit 2017.</p>
+      </div>
+    </footer>
+    <script src="../../backend-url.js"></script>
+    <script src="../../script.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      console.log(params);
+      const stop = "./" + params.get("stop") + ".html";
+
+      console.log(stop);
+      if (params.get("stop") != null) {
+        console.log("test");
+        loadContent(stop);
+      } else {
+        loadContent("./bangkok1.html");
+      }
+    </script>
+    <script>
+      loadGuestbook();
+    </script>
+  </body>
+</html>

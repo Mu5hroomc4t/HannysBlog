@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Micro+5&family=VT323&display=swap");
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Impressum meiner Website." />
+    <title>Hannys Reisetagebuch</title>
+    <link rel="icon" type="png" href="pictures/Homepage/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.cursors-4u.net/cursors/animated/paper-airplane-19477b19-32.css"
+    />
+  </head>
+  <body>
+    <!-- <div class="clouds">
+      <img
+        src="./pictures/Homepage/gifs/moving-clouds-realistic.gif"
+        class="background-clouds"
+      />
+    </div> -->
+    <header class="homepage-header">
+      <button id="menu-open" class="menu-button-open">☰</button>
+      <div class="site-header">
+        <div class="container">
+          <a class="title-link" href="index.html">
+            <span class="homepage-icons">☁️</span>
+            <h1 class="homepage-title">Hannys Reiseblog</h1>
+            <span class="homepage-icons">☁️</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside id="sidebar">
+        <!-- 
+        <section class="settings">Hier werden Einstellungen sein.</section> -->
+        <section class="guestbook glow-box">
+          <form class="guestbook-form" id="guestbook-form">
+            <label for="name" class="guestbook-entry-header">Name:</label>
+            <input
+              type="text"
+              id="name"
+              class="guestbook-text-area"
+              name="name"
+              placeholder="Wie ist dein Name?"
+              required
+              oninvalid="
+                this.setCustomValidity('Bitte gib deinen Namen ein! 🌴')
+              "
+              oninput="this.setCustomValidity('')"
+            />
+            <p class="name-warning">Bitte gib einen namen ein</p>
+            <label for="message" class="guestbook-entry-header"
+              >Nachricht:</label
+            >
+            <textarea
+              type="text"
+              id="message"
+              class="guestbook-text-area"
+              name="message"
+              rows="5"
+              placeholder="Hier kannst du Anmerkungen, Fragen und Ideen hinterlassen!🌴"
+              required
+              oninvalid="
+                this.setCustomValidity('Bitte gib eine Nachricht ein! 💌')
+              "
+              oninput="this.setCustomValidity('')"
+            ></textarea>
+            <button type="submit" class="guestbook-input">Abschicken</button>
+            <p id="guestbook-status"></p>
+            <!-- für erfolgsmeldung-->
+          </form>
+        </section>
+        <section class="guestbook-all-entries glow-box">
+          <section class="guestbook-entries-header-box">
+            <img
+              class="mini-icon"
+              src="pictures/Homepage/gifs/writing-kitten.gif"
+              alt="tippende Katze"
+            />
+            <h3 class="guestbook-header">Gästebuch</h3>
+          </section>
+          <section id="guestbook-entries"></section>
+        </section>
+      </aside>
+
+      <main>
+        <section class="glow-box">
+          <h1>Impressum</h1>
+
+          <p>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
+
+          <h2>Kontakt</h2>
+
+          <p>
+            Kontaktaufnahme ausschließlich per E-Mail:<br />
+            E-Mail: jonis.shima@gmail.com
+          </p>
+
+          <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+
+          <p>
+            Johanna Hepke<br />
+            c/o Kari Paulsen<br />
+            Bismarckstr. 66<br />
+            28203 Bremen
+          </p>
+
+          <h2>Urheberrecht</h2>
+
+          <p>
+            Alle auf dieser Website veröffentlichten Texte, Fotografien und
+            sonstigen Inhalte unterliegen dem deutschen Urheberrecht, soweit
+            nicht anders angegeben. Eine Verwendung außerhalb der gesetzlichen
+            Schranken des Urheberrechts bedarf der vorherigen Zustimmung der
+            Betreiberin.
+          </p>
+
+          <h2>Bildnachweise</h2>
+
+          <p>
+            Sämtliche auf dieser Website verwendeten Fotografien und Grafiken
+            wurden, sofern nicht anders gekennzeichnet, von der Betreiberin
+            selbst erstellt.
+          </p>
+
+          <h2>Haftung für Inhalte</h2>
+
+          <p>
+            Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt
+            erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der
+            bereitgestellten Informationen wird jedoch keine Gewähr übernommen.
+          </p>
+
+          <h2>Haftung für Links</h2>
+
+          <p>
+            Diese Website kann Links zu externen Websites enthalten. Für deren
+            Inhalte sind ausschließlich deren Betreiber verantwortlich. Zum
+            Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Eine
+            permanente inhaltliche Kontrolle der verlinkten Seiten erfolgt
+            jedoch nicht.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-column">
+        <h3>Rechtliches</h3>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <div class="footer-column">
+        <p>© 2026 Johanna Hepke. ☁️ Reiseblog seit 2017.</p>
+        <p>Alle Rechte vorbehalten.</p>
+      </div>
+    </footer>
+    <script src="backend-url.js"></script>
+    <script src="script.js"></script>
+    <script>
+      loadGuestbook();
+    </script>
+  </body>
+</html>
