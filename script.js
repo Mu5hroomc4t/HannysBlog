@@ -34,6 +34,18 @@ function loadContent(selectedFile) {
   }
 }
 
+//////////////////////////*DIA-SHOW*///////////////////////////////////////////////////////////////////
+
+function diaShow(){
+  fetch(getBackendUrl() + "/pictures/journeys")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+}
+
 /////////////////////////////////* GUESTBOOK *////////////////////////////////////////////////////////
 
 const guestbookForm = document.getElementById("guestbook-form");
