@@ -35,15 +35,41 @@ function loadContent(selectedFile) {
 }
 
 //////////////////////////*DIA-SHOW*///////////////////////////////////////////////////////////////////
+//*const listLength = ;
 
-function diaShow(){
-  fetch(getBackendUrl() + "/pictures/journeys")
+function loadSlideshow() {
+  fetch(getBackendUrl() + "/api/images")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
+
       return response.json();
     })
+    .then((images) => {
+      const randomFloat = Math.random() * images.length;
+      const randomInt = Math.floor(randomFloat);
+      // console.log("Those are the images: ", images);
+
+      const currentImage = images[randomInt];
+      const currentImagePath =
+        currentImage.parentPath + "/" + currentImage.name;
+      const cutCurrentImagePath = currentImagePath.slice(13);
+      console.log(
+        // "This is a random number ",
+        // randomInt,
+        // " and the currentImage: ",
+        // currentImage,
+        "and the currentImagePath: ",
+        currentImagePath,
+        "and the cutPath: ",
+        cutCurrentImagePath,
+      );
+
+      const diaShowImage = document.getElementById("diaShowImage");
+      diaShowImage.src = cutCurrentImagePath;
+      console.log("This is the diaShowImage: ", diaShowImage);
+    });
 }
 
 /////////////////////////////////* GUESTBOOK *////////////////////////////////////////////////////////

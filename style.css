@@ -130,17 +130,14 @@ select {
   border-radius: 1rem;
 }
 
-
-
-.dia-show-box{
+.dia-show-pictures {
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-.dia-show-pictures{
-margin: 0.75rem;
-}
+/* .dia-show-pictures {
+  margin: 0.75rem;
+} */
 
 .read-more {
   align-self: flex-start;
@@ -370,11 +367,10 @@ h2 {
   margin-bottom: 5px;
 }
 
-.header-box-h2{
+.header-box-h2 {
   color: #c9b7f4;
   font-size: 1.5rem;
-  text-decoration:underline dotted 3px;
-
+  text-decoration: underline dotted 3px;
 }
 
 h3 {
